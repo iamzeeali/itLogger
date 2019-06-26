@@ -27,6 +27,28 @@ export default (state = initialState, action) => {
         logs: state.logs.filter(log => log.id !== action.payload),
         loading: false
       };
+    case types.SET_CURRENT:
+      return {
+        ...state,
+        current: action.payload
+      };
+    case types.UPDATE_LOG:
+      return {
+        ...state,
+        logs: state.logs.map(log =>
+          log.id === action.payload.id ? action.payload : log
+        )
+      };
+    case types.SEARCH_LOGS:
+      return {
+        ...state,
+        logs: action.payload
+      };
+    case types.CLEAR_CURRENT:
+      return {
+        ...state,
+        current: null
+      };
     case types.SET_LOADING:
       return {
         ...state,

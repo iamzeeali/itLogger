@@ -1,5 +1,20 @@
 {
-  "logs": [],
+  "logs": [
+    {
+      "id": 1,
+      "message": "Network card changed",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2019-06-26T05:56:05.166Z"
+    },
+    {
+      "message": "Wire Cable changed",
+      "attention": false,
+      "tech": "Sara Wilson",
+      "date": "2019-06-26T05:22:35.068Z",
+      "id": 2
+    }
+  ],
   "techs": [
     {
       "id": 1,
